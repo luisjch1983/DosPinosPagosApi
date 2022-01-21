@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Node-MS API</title>
+    <meta content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  </head>
+  <body>
+    <div class="w3-container w3-center">
+      <h2>TOWN-COUNTRY-WEATHER-CURRENCY API</h2>
+      <p>This API is an example of a few Microservices to retrieve Town, Country, Weather and Currency data.</p>
+      <p>The API is written in NodeJS and the results are returned in JSON format.</p>
+      <p> </p>
+      <h2>FUNCTIONS OF THE API</h2>
+      <table class="w3-table-all">
+        <thead>
+          <tr class="w3-blue-gray">
+            <th>Function</th>
+            <th>URL</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>/countries</td>
+          <td>List of all countries</td>
+          <td><a href="/countries"></a></td>
+        </tr>
+        <tr>
+          <td>/countryid2/:id2</td>
+          <td>List country data with country code (2 chars like "DE")</td>
+          <td><a href="/countryid2/DE"></a></td>
+        </tr>
+        <tr>
+          <td>/countryname/:name</td>
+          <td>List country by english name (like "Germany")</td>
+          <td>
+            <a href="/countryname/Germany"></a>
+          </td>
+        </tr>
+        <tr>
+          <td>/towns</td>
+          <td>List of all towns >15K population or a capital</td>
+          <td><a href="/towns">towns</a></td>
+        </tr>
+        <tr>
+          <td>/townname/:name</td>
+          <td>List town by name (like "Munich")</td>
+          <td><a href="/townname/Munich"></a></td>
+        </tr>
+        <tr>
+          <td>/townid/:id</td>
+          <td>List town by id</td>
+          <td><a href="/townid/2867714"></a></td>
+        </tr>
+        <tr>
+          <td>/towncc/:cc</td>
+          <td>List all towns by country code (2 chars like "DE")</td>
+          <td><a href="/towncc/DE"></a></td>
+        </tr>
+        <tr>
+          <td>/weather/:town</td>
+          <td>List weather of a town by name(like "Munich")</td>
+          <td><a href="/weather/Munich"></a></td>
+        </tr>
+        <tr>
+          <td>/weathercondition/:town</td>
+          <td>List weather condition of a town by name(like "Munich")</td>
+          <td>
+            <a href="/weathercondition/Munich"></a>
+          </td>
+        </tr>
+        <tr>
+          <td>/currencies</td>
+          <td>
+            List of all currencies and their values compared to CZK (Czech
+            Crown)
+          </td>
+          <td><a href="/currencies"></a></td>
+        </tr>
+        <tr>
+          <td>/currency/:curr</td>
+          <td>
+            Value of a currency (like "EUR") compared to CZK (Czech Crown)
+          </td>
+          <td><a href="/currency/EUR"></a></td>
+        </tr>
+      </table>
+      <script>
+        var examples = document.getElementsByTagName("a");
+        for (var elem in examples) {
+          examples[elem].innerHTML = examples[elem].href;
+        }
+      </script>
+    </div>
+  </body>
+</html>
